@@ -4,11 +4,11 @@ Tic-Tac-Toe is a small app that is used to help introduce development for Chrome
 Developing a Chrome OS allows your app to run on all platorms giving you endless possibilities!
 
 ## Table Of Contents
-- Version [#Version]
-- Installation [#Installation]
-- Getting Started [#Getting Started]
-- Contribute! [#Contribute]
-- Task List [#Task List]
+- [Version] (#version)
+- [Installation] (#installation)
+- [Getting Started] (#getting-started)
+- [Contribute] (#contribute)
+- [Task List] (#task-list)
 
 ## Version
 1.0
@@ -31,9 +31,9 @@ Check these useful references out:
 Anyone of all abilities are welcome to contribute to this Repo.
 
 ## Task List
-- [] Allow best of three.
-- [] Detects someone has won a round.
-- [] Add player names.
-- [] Add a history score board. Shows players total wins.
-- [] Change app Icon.
-- [] Add graphics in grid.
+- [ ] Allow best of three.
+- [ ] Detects someone has won a round.
+- [ ] Add player names.
+- [ ] Add a history score board. Shows players total wins.
+- [ ] Change app Icon.
+- [ ] Add graphics in grid.
