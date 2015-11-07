@@ -1,5 +1,5 @@
 var logicalTable = new Array(3);
-var player1Turn = true;
+var playerOTurn = true;
 var gameStarted = false;
 
 window.onload = function() {
@@ -8,9 +8,9 @@ window.onload = function() {
 };
 
 function createLogicalGrid(){
-  var row = new Array(3);
   
   for(var i = 0; i < 3; i++){
+    var row = new Array(3);
     for(var y = 0; y < 3; y++){
       row[y] = document.getElementsByName(i.toString()+","+y.toString())[0];
       row[y].addEventListener("click",tileClicked, false);
@@ -21,7 +21,7 @@ function createLogicalGrid(){
 
 
 function startGame(){
-  var player1Score, player2Score = 0;
+  var playerOScore, playerXScore = 0;
   var gameOver;
   gameStarted = true;
   displayMessage(document.getElementById("feedbackArea"),"Your turn Player One");
@@ -35,16 +35,16 @@ function displayMessage(areaToAppendTo, messageToDisplay){
 }
 
 function tileClicked(){
-  if(gameStarted && this.style.backgroundColor === ""){
+  if(gameStarted && this.innerHTML === ""){
     console.log("gamehasstarted");
-    if(player1Turn){
-      this.style.backgroundColor = "red";
-      displayMessage(document.getElementById("feedbackArea"),"Your turn Player Two");
-      player1Turn = !player1Turn;
+    if(playerOTurn){
+      markGrid("O",this);
+      displayMessage(document.getElementById("feedbackArea"),"Your turn Player X");
+      playerOTurn = !playerOTurn;
     } else{
-      this.style.backgroundColor = "blue";
-      displayMessage(document.getElementById("feedbackArea"),"Your turn Player One");
-      player1Turn = !player1Turn;
+      markGrid("X",this);
+      displayMessage(document.getElementById("feedbackArea"),"Your turn Player O");
+      playerOTurn = !playerOTurn;
     }
   }
 }
@@ -53,4 +53,13 @@ function removeChildNodes(node){
   while (node.hasChildNodes()) {
     node.removeChild(node.lastChild);
   }
+}
+
+function markGrid(markValue,grid){
+  var headerObject = document.createElement("H1");
+  headerObject.appendChild(document.createTextNode(markValue));
+
+  headerObject.style.fontSize = "500%";
+  
+  grid.appendChild(headerObject);
 }

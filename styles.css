@@ -38,3 +38,18 @@ h1{
   left:40%;
   position:relative;
 }
+#scorePlayerO, #scorePlayerX{
+  position:absolute;
+  margin:0px;
+}
+#scorePlayerO{
+  left:0px;
+  top:0px;
+  color:red;
+}
+
+#scorePlayerX{
+  right:0px;
+  top:0px;
+  color:blue;
+}
