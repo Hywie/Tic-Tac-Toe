@@ -1,32 +1,45 @@
+
+// GLOBAL VARs
 var logicalTable = new Array(3);
 var playerOTurn = true;
 var gameStarted = false;
 
+/*
+* Main function that is called on page load.
+*/
 window.onload = function() {
-  document.getElementById("button").addEventListener("click",startGame);
+  document.getElementById("button").addEventListener("click",startGame); // Makes button intialise gameplay
   createLogicalGrid();
 };
 
+/*
+* Constructs a multi-dimensional array referencing DOM elements of the table.
+*/
 function createLogicalGrid(){
   
   for(var i = 0; i < 3; i++){
-    var row = new Array(3);
+    var row = new Array(3); // Temp row array to be stored in Global Array
     for(var y = 0; y < 3; y++){
       row[y] = document.getElementsByName(i.toString()+","+y.toString())[0];
-      row[y].addEventListener("click",tileClicked, false);
+      row[y].addEventListener("click",tileClicked, false); // Allows app to detect changes when a grid is changed.
     }
    this.logicalTable[i] = row;
   }
 }
 
-
+/*
+* Called when the play button is pressed.
+* Intialises essential variables
+*/
 function startGame(){
-  var playerOScore, playerXScore = 0;
-  var gameOver;
-  gameStarted = true;
+  var playerOScore, playerXScore = 0; // Ready for future use to enable multiple rounds
+  gameStarted = true; // Set boolean to alert game has started
   displayMessage(document.getElementById("feedbackArea"),"Your turn Player One");
 }
 
+/*
+* Generic function to allow feedback to be given in text form through the banner.
+*/
 function displayMessage(areaToAppendTo, messageToDisplay){
   removeChildNodes(areaToAppendTo);
   var headerObject = document.createElement("H1");
@@ -34,6 +47,10 @@ function displayMessage(areaToAppendTo, messageToDisplay){
   areaToAppendTo.appendChild(headerObject);
 }
 
+/*
+* Called on the event of a tile in the table being clicked.
+* calls functions to see if their is a winner and gives feedback.
+*/
 function tileClicked(){
   if(gameStarted && this.innerHTML === ""){
     console.log("gamehasstarted");
@@ -47,14 +64,21 @@ function tileClicked(){
       playerOTurn = !playerOTurn;
     }
   }
+  calcWinner(); // Checks table to see if their is a winner.
 }
 
+/*
+* Removes all child nodes in the feedback div to allow more text to be overwritten.
+*/
 function removeChildNodes(node){
   while (node.hasChildNodes()) {
     node.removeChild(node.lastChild);
   }
 }
 
+/*
+* Adds a header element as a child to the element passed in to the function.
+*/
 function markGrid(markValue,grid){
   var headerObject = document.createElement("H1");
   headerObject.appendChild(document.createTextNode(markValue));
