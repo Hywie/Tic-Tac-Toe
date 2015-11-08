@@ -11,7 +11,7 @@ Developing a Chrome OS allows your app to run on all platorms giving you endless
 - [Task List] (#task-list)
 
 ## Version
-1.0
+1.1
 
 ## Installation
 It's easy to get started contributing to this development!
