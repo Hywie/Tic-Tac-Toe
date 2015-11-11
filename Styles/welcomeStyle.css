@@ -1,0 +1,16 @@
+body{
+  background-color:#2A2D33;
+  margin-top:100px;
+}
+
+h1{
+  text-align:center;
+  font-family: 'Roboto', sans-serif;
+}
+
+#welcomeMessage{
+  color:white;
+  position:relative;
+  padding:10px;
+  border: 3px solid white;
+}
