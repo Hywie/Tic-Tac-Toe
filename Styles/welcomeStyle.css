@@ -27,21 +27,20 @@ input{
 }
 
 #exitAppElement{
-  color:#ff4d4d;
-  font-family: 'Roboto', sans-serif;
-  font-size:150%;
+  background-color:#ff4d4d;
+  height:12px;
+  width:12px;
   display:inline;
   float:right;
-  bottom:1px;
+  margin-top:4px;
   position:relative;
   margin-right:5px;
   
-  background-color: Transparent;
-  background-repeat:no-repeat;
   border: none;
   cursor:pointer;
   overflow: hidden;
   outline:none;
+  opacity:0.6;
 }
 
 #minAppElement{
@@ -51,16 +50,21 @@ input{
   width:12px;
   border: none;
   float:right;
-  margin-top:5px;
+  margin-top:4px;
   position:relative;
-  margin-right:2px;
+  margin-right:3px;
   cursor:pointer;
   overflow: hidden;
   outline:none;
+  opacity:0.6;
 }
 
 #exitAppElement:hover{
-  color:red;
+  opacity:1;
+}
+
+#minAppElement:hover{
+  opacity:1;
 }
 
 #roundDropDown{
