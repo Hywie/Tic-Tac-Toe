@@ -10,6 +10,10 @@ h1{
   margin-top:100px;
 }
 
+input{
+  -webkit-app-region: no-drag;
+}
+
 #welcomeMessage{
   color:#e3e3e3;
   position:relative;
@@ -38,7 +42,6 @@ h1{
   cursor:pointer;
   overflow: hidden;
   outline:none;
-  -webkit-app-region: no-drag;
 }
 
 #minAppElement{
@@ -54,10 +57,20 @@ h1{
   cursor:pointer;
   overflow: hidden;
   outline:none;
-  
-  -webkit-app-region: no-drag;
 }
 
 #exitAppElement:hover{
   color:red;
+}
+
+#roundDropDown{
+  width:150px;
+  height:25px;
+  margin-left:34%;
+  margin-top:40px;
+  -webkit-app-region: no-drag;
+}
+
+#toundDropDown option{
+  text-align:center;
 }
