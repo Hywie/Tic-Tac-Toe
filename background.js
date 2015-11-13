@@ -8,7 +8,7 @@ chrome.app.runtime.onLaunched.addListener(function(launchData) {
   chrome.app.window.create(
     'welcomeScreen.html',
     {
-      id: 'mainWindow',
+      id: 'welcomeWindow',
       innerBounds: {
         maxWidth: 450,
         maxHeight: 350,
