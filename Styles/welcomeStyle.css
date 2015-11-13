@@ -1,16 +1,57 @@
 body{
   background-color:#2A2D33;
-  margin-top:100px;
+  margin:0;
+  -webkit-app-region: drag;
 }
 
 h1{
   text-align:center;
   font-family: 'Roboto', sans-serif;
+  margin-top:100px;
+}
+
+.toolbar{
+  width:100%;
+  height:25px;
+  background-color:#1f2025;
+  opacity:0;
+  webkit-app-region: drag;
+}
+
+.toolbar:hover{
+  opacity:1;
 }
 
 #welcomeMessage{
-  color:white;
+  color:#e3e3e3;
   position:relative;
   padding:10px;
-  border: 3px solid white;
+  border: 3px solid #e3e3e3;
+}
+
+#welcomeMessage:hover{
+  color:white;
+  border-color:white;
+}
+
+#exitIcon{
+  color:#ff4d4d;
+  font-family: 'Roboto', sans-serif;
+  font-size:150%;
+  display:inline;
+  margin-left:90%;
+  bottom:1px;
+  position:relative;
+  margin-right:5px;
+  
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+#exitIcon:hover{
+  color:red;
 }

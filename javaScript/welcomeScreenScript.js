@@ -1,14 +1,13 @@
 
 
-function main(){
-  
-}
-
+window.onload = function(){
+  document.getElementById("exitIcon").onclick = function() { window.close(); };
+};
 
 
 function createGameWindow(){
-      chrome.app.window.create('index.html',{
-      id: 'mainWindow',
+      chrome.app.window.create('welcomePage.html',{
+      id: 'gameWindow',
       innerBounds: {
         width: 800,
         height: 600,
@@ -18,4 +17,5 @@ function createGameWindow(){
     }
   );
   
+  window.close();
 }
