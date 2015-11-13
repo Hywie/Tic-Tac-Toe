@@ -41,6 +41,23 @@ h1{
   -webkit-app-region: no-drag;
 }
 
+#minAppElement{
+  background-color:green;
+  display:inline;
+  height:12px;
+  width:12px;
+  border: none;
+  float:right;
+  margin-top:5px;
+  position:relative;
+  margin-right:2px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  
+  -webkit-app-region: no-drag;
+}
+
 #exitAppElement:hover{
   color:red;
 }
