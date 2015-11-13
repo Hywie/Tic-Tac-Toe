@@ -1,7 +1,7 @@
 
 
 window.onload = function(){
-  document.getElementById("exitIcon").onclick = function() { window.close(); };
+  document.getElementById("exitAppElement").onclick = function() { window.close(); };
 };
 
 

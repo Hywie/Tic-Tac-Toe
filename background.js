@@ -6,7 +6,7 @@
  */
 chrome.app.runtime.onLaunched.addListener(function(launchData) {
   chrome.app.window.create(
-    'gamePage.html',
+    'welcomeScreen.html',
     {
       id: 'mainWindow',
       innerBounds: {
