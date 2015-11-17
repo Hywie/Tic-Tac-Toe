@@ -3,13 +3,19 @@
 var logicalTable = new Array(3);
 var playerOTurn = true;
 var gameStarted = false;
-
+var numOfRounds = 1;
+  
 /*
 * Main function that is called on page load.
 */
 window.onload = function() {
   document.getElementById("button").addEventListener("click",startGame); // Makes button intialise gameplay
   createLogicalGrid();
+  
+  chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+      setRounds(request.rounds);
+  });
 };
 
 /*
@@ -86,4 +92,10 @@ function markGrid(markValue,grid){
   headerObject.style.fontSize = "500%";
   
   grid.appendChild(headerObject);
+}
+
+function setRounds(rounds){
+  if(rounds !== null){
+    this.numOfRounds = rounds;
+  }
 }
