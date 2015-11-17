@@ -1,4 +1,4 @@
-## What is Tic-Tac-Toe Chromebook Edition?
+## What is Tic-Tac-Toe?
 
 Tic-Tac-Toe is a small app that is used to help introduce development for Chrome OS to developers.
 Developing a Chrome OS allows your app to run on all platorms giving you endless possibilities!
