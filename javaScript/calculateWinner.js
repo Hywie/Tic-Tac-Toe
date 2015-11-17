@@ -6,18 +6,25 @@ function calcWinner(){
 
   if(getGridValue(0,0) == getGridValue(0,1) && getGridValue(0,1) == getGridValue(0,2) && getGridValue(0,0) !== null){
     displayWinningMessage();
+    return true;
   } else if(getGridValue(0,0) == getGridValue(1,0) && getGridValue(1,0) == getGridValue(2,0) && getGridValue(0,0) !== null){
     displayWinningMessage();
+    return true;
   } else if(getGridValue(0,1) == getGridValue(1,1) && getGridValue(1,1) == getGridValue(2,1) && getGridValue(0,1) !== null){
     displayWinningMessage();
+    return true;
   }else if(getGridValue(0,2) == getGridValue(1,2) && getGridValue(1,2) == getGridValue(2,2) && getGridValue(0,2) !== null){
     displayWinningMessage();
+    return true;
   }else if(getGridValue(2,0) == getGridValue(2,1) && getGridValue(2,1) == getGridValue(2,2) && getGridValue(2,0) !== null){
     displayWinningMessage();
+    return true;
   }else if(getGridValue(0,0) == getGridValue(1,1) && getGridValue(1,1) == getGridValue(2,2) && getGridValue(0,0) !== null){
     displayWinningMessage();
+    return true;
   }else if(getGridValue(0,2) == getGridValue(1,1) && getGridValue(1,1) == getGridValue(2,0) && getGridValue(0,2) !== null){
     displayWinningMessage();
+    return true;
   }else{
     return false;
   }

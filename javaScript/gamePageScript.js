@@ -4,18 +4,20 @@ var logicalTable = new Array(3);
 var playerOTurn = true;
 var gameStarted = false;
 var numOfRounds = 1;
+var roundNum = 1;
   
 /*
 * Main function that is called on page load.
 */
 window.onload = function() {
-  document.getElementById("button").addEventListener("click",startGame); // Makes button intialise gameplay
   createLogicalGrid();
   
   chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
       setRounds(request.rounds);
   });
+  
+  startGame();
 };
 
 /*
@@ -41,6 +43,7 @@ function startGame(){
   var playerOScore, playerXScore = 0; // Ready for future use to enable multiple rounds
   gameStarted = true; // Set boolean to alert game has started
   displayMessage(document.getElementById("feedbackArea"),"Your turn Player One");
+  console.log("end");
 }
 
 /*
@@ -70,7 +73,13 @@ function tileClicked(){
       playerOTurn = !playerOTurn;
     }
   }
-  calcWinner(); // Checks table to see if their is a winner.
+  if(calcWinner()){
+    gameStarted = false;
+    resetRound();
+  }
+  if(this.roundNum > this.numOfRounds){
+    console.log("End");
+  }
 }
 
 /*
@@ -94,6 +103,20 @@ function markGrid(markValue,grid){
   grid.appendChild(headerObject);
 }
 
+function resetRound(){
+  this.roundNum += 1;
+  
+  for(var i = 0; i < 3; i++){
+    for(var y = 0; y < 3; y++){
+      document.getElementsByName(i.toString()+","+y.toString())[0].innerHTML = "";
+    }
+  }
+  
+  if(this.roundNum <= this.numOfRounds){
+     startGame();
+     
+  }
+}
 function setRounds(rounds){
   if(rounds !== null){
     this.numOfRounds = rounds;

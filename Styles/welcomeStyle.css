@@ -1,5 +1,4 @@
 body{
-  background-color:#2A2D33;
   margin:0;
   -webkit-app-region: drag;
 }
@@ -10,37 +9,6 @@ h1{
   margin-top:100px;
 }
 
-input{
-  height:12px;
-  width:12px;
-  position:relative;
-  
-  display:inline;
-  float:right;
-  margin-right:3px;
-  margin-top:4px;
-  
-  border: none;
-  cursor:pointer;
-  overflow: hidden;
-  outline:none;
-  
-  opacity:0.6;
-  -webkit-app-region: no-drag;
-}
-
-input:hover{
-  opacity:1;
-}
-
-#exitAppElement{
-  background-color:#ff4d4d;
-  margin-right:5px;
-}
-
-#minAppElement{
-  background-color:green;
-}
 
 #welcomeMessage{
   color:#e3e3e3;
