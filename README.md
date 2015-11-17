@@ -35,4 +35,4 @@ Anyone of all abilities are welcome to contribute to this Repo.
 - [X] Detects someone has won a round.
 - [ ] Add player names.
 - [ ] Add a history score board. Shows players total wins.
-- [ ] Change app Icon.
+- [X] Change app Icon.
