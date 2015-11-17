@@ -31,7 +31,7 @@ Check these useful references out:
 Anyone of all abilities are welcome to contribute to this Repo.
 
 ## Task List
-- [ ] Allow best of three.
+- [X] Allow best of three.
 - [X] Detects someone has won a round.
 - [ ] Add player names.
 - [ ] Add a history score board. Shows players total wins.
