@@ -1,7 +1,13 @@
-## What is Tic-Tac-Toe?
+# Tic-Tac-Toe
 
-Tic-Tac-Toe is a small app that is used to help introduce development for Chrome OS to developers.
-Developing a Chrome OS allows your app to run on all platorms giving you endless possibilities!
+Tic-Tac-Toe is a chrome packaged app game made using Javascript, HTML5 and CSS.
+
+  - Runnable on all platforms
+  - Runs offline
+  - Magic
+
+> Chrome Apps let you use HTML5, CSS, and 
+> JavaScript to deliver an experience comparable to a native application.
 
 ## Table Of Contents
 - [Version] (#version)
@@ -11,7 +17,8 @@ Developing a Chrome OS allows your app to run on all platorms giving you endless
 - [Task List] (#task-list)
 
 ## Version
-1.2
+1.1.1
+
 
 ## Installation
 It's easy to get started contributing to this development!
