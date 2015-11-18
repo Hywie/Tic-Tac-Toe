@@ -4,25 +4,25 @@
 function calcWinner() {
 
     if (getGridValue(0, 0) == getGridValue(0, 1) && getGridValue(0, 1) == getGridValue(0, 2) && getGridValue(0, 0) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else if (getGridValue(0, 0) == getGridValue(1, 0) && getGridValue(1, 0) == getGridValue(2, 0) && getGridValue(0, 0) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else if (getGridValue(0, 1) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 1) && getGridValue(0, 1) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else if (getGridValue(0, 2) == getGridValue(1, 2) && getGridValue(1, 2) == getGridValue(2, 2) && getGridValue(0, 2) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else if (getGridValue(2, 0) == getGridValue(2, 1) && getGridValue(2, 1) == getGridValue(2, 2) && getGridValue(2, 0) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else if (getGridValue(0, 0) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 2) && getGridValue(0, 0) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else if (getGridValue(0, 2) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 0) && getGridValue(0, 2) !== null) {
-        displayWinningMessage();
+        roundWon();
         return true;
     } else {
         return false;
@@ -43,10 +43,15 @@ function getGridValue(x, y) {
 /*
  * Calculates who has won and displays a winning message
  */
-function displayWinningMessage() {
+function updateScore() {
     if (playerOTurn) {
-        displayMessage(document.getElementById("feedbackArea"), "Player X is the Winner!");
+        this.xScore += 1;
     } else {
-        displayMessage(document.getElementById("feedbackArea"), "Player O is the Winner!");
+       this.oScore += 1;
     }
+}
+
+function roundWon(){
+    updateScore();
+    this.roundNum += 1;
 }

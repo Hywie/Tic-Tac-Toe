@@ -7,18 +7,22 @@ var gameStarted = false;
 var numOfRounds = 1;
 var roundNum = 1;
 
+var oScore = 0;
+var xScore = 0;
+
 /*
  * Attaches functon to run on page load.
  * Listens for the passed message, contains the number of rounds, and sets it to the global variable.
  */
-window.onload = function() {
+window.onload = function () {
 
     createLogicalGrid();
 
     chrome.runtime.onMessage.addListener(
-        function(request, sender, sendResponse) {
+        function (request, sender, sendResponse) {
             setRounds(request.rounds);
-        });
+        }
+    );
 
     startGame();
 };
@@ -49,10 +53,8 @@ function createLogicalGrid() {
  * Intialises essential variables
  */
 function startGame() {
-    var playerOScore, playerXScore = 0; // Ready for future use to enable multiple rounds
-    gameStarted = true; // Set boolean to alert game has started
+    this.gameStarted = true; // Set boolean to alert game has started
     displayMessage(document.getElementById("feedbackArea"), "Round: "+this.roundNum);
-    console.log("end");
 }
 
 /*
@@ -71,7 +73,7 @@ function displayMessage(areaToAppendTo, messageToDisplay) {
  */
 function tileClicked() {
     if (gameStarted && this.innerHTML === "") {
-        console.log("gamehasstarted");
+
         if (playerOTurn) {
             markGrid("O", this);
             playerOTurn = !playerOTurn;
@@ -79,13 +81,23 @@ function tileClicked() {
             markGrid("X", this);
             playerOTurn = !playerOTurn;
         }
-    }
-    if (calcWinner()) {
-        gameStarted = false;
-        resetRound();
-    }
-    if (this.roundNum > this.numOfRounds) {
-        console.log("End");
+    
+        if (calcWinner()) {
+            gameStarted = false;
+            clearTable();
+
+            if (roundNum > numOfRounds) {
+                if(oScore > xScore){
+                    displayMessage(document.getElementById("feedbackArea"),"Player O wins!");
+                } else if(oScore < xScore){
+                    displayMessage(document.getElementById("feedbackArea"),"Player X wins!");
+                } else{
+                    displayMessage(document.getElementById("feedbackArea"),"It's a draw!");
+                }
+            } else{
+                startGame();
+            }
+        }
     }
 }
 
@@ -109,17 +121,11 @@ function markGrid(markValue, grid) {
     grid.appendChild(headerObject);
 }
 
-function resetRound() {
-    this.roundNum += 1;
+function clearTable() {
     for (var i = 0; i < 3; i++) {
         for (var y = 0; y < 3; y++) {
             document.getElementsByName(i.toString() + "," + y.toString())[0].innerHTML = "";
         }
-    }
-
-    if (this.roundNum <= this.numOfRounds) {
-        startGame();
-
     }
 }
 
