@@ -1,5 +1,7 @@
 
-// GLOBAL VARs
+/*
+* Set of global variables.
+*/
 var logicalTable = new Array(3);
 var playerOTurn = true;
 var gameStarted = false;
@@ -7,7 +9,8 @@ var numOfRounds = 1;
 var roundNum = 1;
   
 /*
-* Main function that is called on page load.
+* Attaches functon to run on page load.
+* Listens for the passed message, contains the number of rounds, and sets it to the global variable.
 */
 window.onload = function() {
   createLogicalGrid();
@@ -21,11 +24,11 @@ window.onload = function() {
 };
 
 /*
-* Constructs a multi-dimensional array referencing DOM elements of the table.
+* Constructs a multi-dimensional array referencing DOM elements of the table to be used as the gird for the game.
 */
 function createLogicalGrid(){
   
-  for(var i = 0; i < 3; i++){
+  for(var i = 0; i < 3; i++){ // i is the column number
     var row = new Array(3); // Temp row array to be stored in Global Array
     for(var y = 0; y < 3; y++){
       row[y] = document.getElementsByName(i.toString()+","+y.toString())[0];
