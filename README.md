@@ -21,13 +21,21 @@ Tic-Tac-Toe is a chrome packaged app game made using Javascript, HTML5 and CSS.
 
 
 ## Installation
-It's easy to get started contributing to this development!
+> All you need is your favourite text editor and the Chrome web browser.
+~~Chrome Dev Editor is recommended~~
+> Chrome Dev Editor is no longer supported by google.
 
-1. Download the [Chrome Dev Editor](https://chrome.google.com/webstore/detail/chrome-dev-editor-develop/pnoffddplpippgcfjdhbmhkofpnaalpg?hl=en), this is a developer preview version
-2. Chrome Dev Editor has it's own built in git control! Use it to make a git clone!
+1. Clone this repo.
+2. Navigate to settings in Chrome.
+3. Select *Extensions* in the left tab.
+4. Tick the *"Developer Mode"* box.
+5. Click *"Load unpacked extension..."*
+6. Select the git clone file.
+> Hit the launch button and you are done!
+> The goal is to get this published on the Chrome Web Store!
 
 ## Getting Started
-It's dead easy to get started. Look through the current code to get an understanding of how the app works.
+It's *dead easy* to get started. Look through the current code to get an understanding of how the app works.
 Chrome apps are developed in Javascript, HTML5 and CSS.
 
 Check these useful references out:
