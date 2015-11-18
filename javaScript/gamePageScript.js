@@ -51,7 +51,7 @@ function createLogicalGrid() {
 function startGame() {
     var playerOScore, playerXScore = 0; // Ready for future use to enable multiple rounds
     gameStarted = true; // Set boolean to alert game has started
-    displayMessage(document.getElementById("feedbackArea"), "Your turn Player One");
+    displayMessage(document.getElementById("feedbackArea"), "Round: "+this.roundNum);
     console.log("end");
 }
 
@@ -74,11 +74,9 @@ function tileClicked() {
         console.log("gamehasstarted");
         if (playerOTurn) {
             markGrid("O", this);
-            displayMessage(document.getElementById("feedbackArea"), "Your turn Player X");
             playerOTurn = !playerOTurn;
         } else {
             markGrid("X", this);
-            displayMessage(document.getElementById("feedbackArea"), "Your turn Player O");
             playerOTurn = !playerOTurn;
         }
     }
