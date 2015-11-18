@@ -15,7 +15,5 @@
     "background": {
       "scripts": ["background.js"]
     }
-  },
-  "Permissions": [
-  ]
+  }
 }
