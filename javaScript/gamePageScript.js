@@ -33,6 +33,12 @@ function createLogicalGrid(){
     for(var y = 0; y < 3; y++){
       row[y] = document.getElementsByName(i.toString()+","+y.toString())[0];
       row[y].addEventListener("click",tileClicked, false); // Allows app to detect changes when a grid is changed.
+      if(y > 0){
+          row[y].style.borderLeft = "1px solid white";
+      }
+      if(i <2){
+          row[y].style.borderBottom = "1px solid white";
+      }
     }
    this.logicalTable[i] = row;
   }

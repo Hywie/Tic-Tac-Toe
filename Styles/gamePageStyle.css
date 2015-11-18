@@ -1,13 +1,13 @@
 tr,td{
-  border:1px solid black;
+    border-color:white;
 }
 table{
-  width:90%;
-  height:90%;
-  padding:5%;
-  border:collapse;
-  position:absolute;
-  margin:10px;
+    width:90%;
+    height:90%;
+    padding:0px;
+    position:absolute;
+    margin-left:10px;
+    border-collapse: collapse;
 }
 tr{
   width:100%;
@@ -23,11 +23,12 @@ input{
   margin-top:5px;
 }
 h1{
-  font-size:150%;
-  margin:0;
-  padding:0;
-  text-align:center;
-  position:relative;
+    font-size:150%;
+    margin:0;
+    padding:0;
+    text-align:center;
+    position:relative;
+    color:white;
 }
 #scorePlayerO, #scorePlayerX{
   position:absolute;
