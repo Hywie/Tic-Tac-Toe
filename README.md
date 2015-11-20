@@ -14,7 +14,7 @@ Tic-Tac-Toe is a chrome packaged app game made using Javascript, HTML5 and CSS.
 - [Installation] (#installation)
 - [Getting Started] (#getting-started)
 - [Contribute] (#contribute)
-- [License] (#License)
+- [License] (#license)
 
 ## Version
 1.1.1
