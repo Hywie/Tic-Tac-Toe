@@ -2,7 +2,7 @@
 
 body{
   padding:0;
-  margin:0px;
+  margin:0;
   background-color:#2A2D33;
   webkit-app-region: drag;
 }
@@ -12,7 +12,6 @@ body{
   width:12px;
   position:relative;
   
-  display:inline;
   float:right;
   margin:2px;
   margin-right:3px;
