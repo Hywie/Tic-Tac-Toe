@@ -16,15 +16,8 @@ td{
   width:25%;
   height:25%;
 }
-input{
-  position:relative;
-  left:45%;
-  margin-top:5px;
-}
 h1{
     font-size:150%;
-    margin:0;
-    padding:0;
     text-align:center;
     position:relative;
     color:white;

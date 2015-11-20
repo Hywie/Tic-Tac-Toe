@@ -15,6 +15,7 @@ var xScore = 0;
  * Listens for the passed message, contains the number of rounds, and sets it to the global variable.
  */
 window.onload = function () {
+    configToolbar();
 
     createLogicalGrid();
 
