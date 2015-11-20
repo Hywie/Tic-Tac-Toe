@@ -1,28 +1,39 @@
+
+function maxMovesMade() {
+  if(this.numberOfMoves >= 9){
+    return true;
+  }
+  return false;
+}
+
 /*
  * Traverses all possible combinations to see if there is a winning pattern in table
  */
 function calcWinner() {
 
-    if (getGridValue(0, 0) == getGridValue(0, 1) && getGridValue(0, 1) == getGridValue(0, 2) && getGridValue(0, 0) !== null) {
-        roundWon();
+    if(maxMovesMade()){
+        roundWon(true);
+        return true;
+    } else if (getGridValue(0, 0) == getGridValue(0, 1) && getGridValue(0, 1) == getGridValue(0, 2) && getGridValue(0, 0) !== null) {
+        roundWon(false);
         return true;
     } else if (getGridValue(0, 0) == getGridValue(1, 0) && getGridValue(1, 0) == getGridValue(2, 0) && getGridValue(0, 0) !== null) {
-        roundWon();
+        roundWon(false);
         return true;
     } else if (getGridValue(0, 1) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 1) && getGridValue(0, 1) !== null) {
-        roundWon();
+        roundWon(false);
         return true;
     } else if (getGridValue(0, 2) == getGridValue(1, 2) && getGridValue(1, 2) == getGridValue(2, 2) && getGridValue(0, 2) !== null) {
-        roundWon();
+        roundWon(false);
         return true;
     } else if (getGridValue(2, 0) == getGridValue(2, 1) && getGridValue(2, 1) == getGridValue(2, 2) && getGridValue(2, 0) !== null) {
-        roundWon();
+        roundWon(false);
         return true;
     } else if (getGridValue(0, 0) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 2) && getGridValue(0, 0) !== null) {
-        roundWon();
+        roundWon(false);
         return true;
     } else if (getGridValue(0, 2) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 0) && getGridValue(0, 2) !== null) {
-        roundWon();
+        roundWon(false);
         return true;
     } else {
         return false;
@@ -51,7 +62,9 @@ function updateScore() {
     }
 }
 
-function roundWon(){
-    updateScore();
+function roundWon(isDraw){
+    if(!isDraw){
+      updateScore();
+    }
     this.roundNum += 1;
 }

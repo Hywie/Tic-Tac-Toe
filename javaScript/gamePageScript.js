@@ -10,6 +10,8 @@ var roundNum = 1;
 var oScore = 0;
 var xScore = 0;
 
+var numberOfMoves = 0;
+
 /*
  * Attaches functon to run on page load.
  * Listens for the passed message, contains the number of rounds, and sets it to the global variable.
@@ -74,6 +76,7 @@ function displayMessage(areaToAppendTo, messageToDisplay) {
  */
 function tileClicked() {
     if (gameStarted && this.innerHTML === "") {
+        numberOfMoves += 1;
 
         if (playerOTurn) {
             markGrid("O", this);
@@ -128,6 +131,7 @@ function clearTable() {
             document.getElementsByName(i.toString() + "," + y.toString())[0].innerHTML = "";
         }
     }
+    numberOfMoves = 0;
 }
 
 function setRounds(rounds) {
