@@ -32,6 +32,7 @@ Chrome Dev Editor is no longer supported by google.
 4. Tick the *"Developer Mode"* box.
 5. Click *"Load unpacked extension..."*
 6. Select the git clone file.
+
 > Hit the launch button and you are done!
 > The goal is to get this published on the Chrome Web Store!
 
