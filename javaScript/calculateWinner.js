@@ -15,24 +15,31 @@ function calcWinner() {
         roundWon(true);
         return true;
     } else if (getGridValue(0, 0) == getGridValue(0, 1) && getGridValue(0, 1) == getGridValue(0, 2) && getGridValue(0, 0) !== null) {
+        // Checks top row horizontally
         roundWon(false);
         return true;
     } else if (getGridValue(0, 0) == getGridValue(1, 0) && getGridValue(1, 0) == getGridValue(2, 0) && getGridValue(0, 0) !== null) {
+        // Checks first left column
         roundWon(false);
         return true;
     } else if (getGridValue(0, 1) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 1) && getGridValue(0, 1) !== null) {
+      //Checks middle column vertically
         roundWon(false);
         return true;
     } else if (getGridValue(0, 2) == getGridValue(1, 2) && getGridValue(1, 2) == getGridValue(2, 2) && getGridValue(0, 2) !== null) {
+      // Checks far right column vertically
         roundWon(false);
         return true;
     } else if (getGridValue(2, 0) == getGridValue(2, 1) && getGridValue(2, 1) == getGridValue(2, 2) && getGridValue(2, 0) !== null) {
+        // Checks middle row horizontally
         roundWon(false);
         return true;
     } else if (getGridValue(0, 0) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 2) && getGridValue(0, 0) !== null) {
+        // Checks across, top left to bottom right
         roundWon(false);
         return true;
     } else if (getGridValue(0, 2) == getGridValue(1, 1) && getGridValue(1, 1) == getGridValue(2, 0) && getGridValue(0, 2) !== null) {
+        // Checks across, top right to bottom left
         roundWon(false);
         return true;
     } else {
