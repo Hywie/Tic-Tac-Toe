@@ -26,6 +26,8 @@ window.onload = function () {
             setRounds(request.rounds);
         }
     );
+    
+    document.getElementById("overLay").addEventListener("click", function(){ this.style.display = "none"; document.getElementById("feedbackBox").style.display = "none";},false);
 
     startGame();
 };
@@ -92,11 +94,11 @@ function tileClicked() {
 
             if (roundNum > numOfRounds) {
                 if(oScore > xScore){
-                    displayMessage(document.getElementById("feedbackArea"),"Player O wins!");
+                    displayFeedbackBox("Player O Wins the game");
                 } else if(oScore < xScore){
-                    displayMessage(document.getElementById("feedbackArea"),"Player X wins!");
+                    displayFeedbackBox("Player X wins the game");
                 } else{
-                    displayMessage(document.getElementById("feedbackArea"),"It's a draw!");
+                    displayFeedbackBox("It's a draw");
                 }
             } else{
                 startGame();

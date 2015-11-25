@@ -7,6 +7,7 @@
 </head>
 
 <body>
+    <div id="overLay" style="width:100%; height:100%; position:absolute; left:0; background-color: black; opacity:0.4; -webkit-app-region: no-drag; z-index:1; display:none;"></div>
   <input type="button" id="exitAppElement" value="" />
   <input type="button" id="minAppElement" value="" />
   
@@ -17,11 +18,13 @@
     <tr><td name="1,0"></td><td name="1,1" ></td><td name="1,2"></td></tr>
     <tr><td name="2,0"></td><td name="2,1"></td><td name="2,2"></td></tr>
   </table>
-  
-  
+    <div id="feedbackBox" style="width:40%; height:40%; position:absolute; left:30%; top: 30%; background-color: white; z-index:1; display:none;">
+        <h1 style="color:black;">Feedback Message</h1>
+    </div>
   
   <script src="javaScript/gamePageScript.js"></script>
   <script src="javaScript/calculateWinner.js"></script>
   <script src="javaScript/globalScript.js"></script>
+    <script src="javaScript/feedbackUser.js"></script>
 </body>
 </html>

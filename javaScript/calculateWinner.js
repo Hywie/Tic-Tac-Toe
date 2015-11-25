@@ -63,8 +63,10 @@ function getGridValue(x, y) {
  */
 function updateScore() {
     if (playerOTurn) {
+        displayFeedbackBox("X wins this round!");
         this.xScore += 1;
     } else {
+        displayFeedbackBox("O wins this round!");
        this.oScore += 1;
     }
 }
