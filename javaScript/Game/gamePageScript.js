@@ -99,6 +99,7 @@ function tileClicked() {
                 } else{
                     displayFeedbackBox("It's a draw");
                 }
+                setFeedbackExit(createMenuWindow); // Change to exit the window and go back to main menu
             } else{
                 startGame();
             }
