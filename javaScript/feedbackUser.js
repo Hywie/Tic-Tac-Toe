@@ -8,3 +8,7 @@ function displayFeedbackBox(feedbackMessage){
         return true;
     }
 }
+
+function setFeedbackExit(functionToPerform){
+    document.getElementById("overLay").addEventListener("click", functionToPerform ,false);
+}

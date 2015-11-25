@@ -26,8 +26,7 @@ window.onload = function () {
             setRounds(request.rounds);
         }
     );
-    
-    document.getElementById("overLay").addEventListener("click", function(){ this.style.display = "none"; document.getElementById("feedbackBox").style.display = "none";},false);
+    setFeedbackExit(function(){ this.style.display = "none"; document.getElementById("feedbackBox").style.display = "none";})
 
     startGame();
 };
