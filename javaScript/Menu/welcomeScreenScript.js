@@ -16,7 +16,7 @@ function listenToSelect() {
 
 
 function createGameWindow(numOfRounds) {
-    chrome.app.window.create('gamePage.html', {
+    chrome.app.window.create('html/gamePage.html', {
         id: 'gameWindow',
         innerBounds: {
             width: 800,
