@@ -1,5 +1,7 @@
 # Tic-Tac-Toe
 
+![Screenshot of app in action](screenshot.png)
+
 Tic-Tac-Toe is a chrome packaged app game made using Javascript, HTML5 and CSS.
 
   - Runnable on all platforms
