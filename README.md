@@ -6,7 +6,7 @@ Tic-Tac-Toe is a chrome packaged app game made using Javascript, HTML5 and CSS.
 
   - Runnable on all platforms
   - Runs offline
-  - Magic
+  - Magic?
 
 > Chrome Apps let you use HTML5, CSS, and 
 > JavaScript to deliver an experience comparable to a native application.
@@ -26,7 +26,7 @@ Tic-Tac-Toe is a chrome packaged app game made using Javascript, HTML5 and CSS.
 > All you need is your favourite text editor and the Chrome web browser.
 ~~Chrome Dev Editor is recommended~~
 
-Chrome Dev Editor is no longer supported by google.
+**Chrome Dev Editor is no longer supported by google.**
 
 1. Clone this repo.
 2. Navigate to settings in Chrome.
@@ -48,6 +48,13 @@ Check these useful references out:
 
 ## Contribute
 Anyone of all abilities are welcome to contribute to this Repo.
+
+1. Fork it.
+2. Create a branch | ```sh git checkout -b my_tic_tac_toe ```
+3. Commit your changes | ```sh git commit -am "Added an awesome font!" ```
+4. Push to the branch | ```sh git push origin my_tic_tac_toe ```
+5. Open a Pull Request
+6. Sit back and have a Coffee
 
 ## License
 
