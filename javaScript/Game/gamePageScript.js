@@ -96,7 +96,9 @@ function tileClicked() {
                     displayFeedbackBox("Player O Wins the game");
                 } else if(oScore < xScore){
                     displayFeedbackBox("Player X wins the game");
-                } else{
+                } else if (numOfRounds == 1){
+                    displayFeedbackBox("Nobody has won this game");
+                } else {
                     displayFeedbackBox("It's a draw");
                 }
                 setFeedbackExit(createMenuWindow); // Change to exit the window and go back to main menu
